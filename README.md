@@ -18,4 +18,24 @@ Next card was: 5
 Your score is: 400
 Play again? [y/n] y
 
-I am a single white male 
+
+startGame
+- Player starts the game
+
+DisplayCard
+-Displays the current Card
+
+GuessHighorLow
+- Player guess if next card will be higher or lower 
+
+CorrectGuess-
+-Checks to see if players guess is correct or not
+
+DisplayNext
+-displays the next card
+
+GainPoints
+-Earn or lose points depending on whether the card is higher or loser 
+
+CheckScore
+-Checks the players point count 
