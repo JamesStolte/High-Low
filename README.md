@@ -18,7 +18,10 @@ Next card was: 5
 Your score is: 400
 Play again? [y/n] y
 
-
+Questions for GITHUB:
+1. How can I push changes to main on GITHUB instead of creating forks
+2. How can i make it so I dont have to ask to commit changes to main
+3. How can I ask to get a specific pull? 
 startGame
 - Player starts the game
 
@@ -39,3 +42,4 @@ GainPoints
 
 CheckScore
 -Checks the players point count 
+
