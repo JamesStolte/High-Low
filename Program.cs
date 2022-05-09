@@ -6,7 +6,7 @@ namespace HighLow
         static void Main()
         {
             Director director = new Director();
-            Director.StartGame();
+            director.StartGame();
             
         }
     }
