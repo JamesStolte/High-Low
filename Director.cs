@@ -3,18 +3,21 @@ namespace HighLow
 {
     class Director
     {
+        private Deck deck = new Deck();
         //Constructor
         public void StartGame()
         {
             bool keepPlaying = true;
+            
             while(keepPlaying == true)
             {
                 string playingInput = GetPlayingInput();
                 if (playingInput == "y")
                 {
-                    CardGen();
+                    
+                    deck.CardGen();
                     string userInput = HiLowInput();
-                    DoOutputs(); 
+                    deck.DoOutputs(); 
                 }
                 else if(playingInput == "n")
                 {
