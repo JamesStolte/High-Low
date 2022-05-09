@@ -12,13 +12,13 @@ namespace HighLow
                 string playingInput = GetPlayingInput();
                 if (playingInput == "y")
                 {
-                    cardGen();
+                    CardGen();
                     string userInput = HiLowInput();
                     DoOutputs(); 
                 }
                 else if(playingInput == "n")
                 {
-                    bool keepPlaying = false();
+                    keepPlaying = false;
                 }
                 else
                 {
@@ -80,6 +80,8 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
+
+            return scoreChange;
         }
     }
 }

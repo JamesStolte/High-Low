@@ -23,6 +23,7 @@ Questions for GITHUB:
 2. How can i make it so I dont have to ask to commit changes to main
 3. How can I ask to get a specific pull? 
 
+
 Classes:
 Director
 Deck
