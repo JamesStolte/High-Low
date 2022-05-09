@@ -22,6 +22,8 @@ Questions for GITHUB:
 1. How can I push changes to main on GITHUB instead of creating forks
 2. How can i make it so I dont have to ask to commit changes to main
 3. How can I ask to get a specific pull? 
+
+
 startGame
 - Player starts the game
 
