@@ -48,6 +48,7 @@ namespace HighLow
                 else
                 {
                     Console.WriteLine("Error.  Invalid input.");
+                    return "error";
                 }
 
             }
