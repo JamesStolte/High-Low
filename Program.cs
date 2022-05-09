@@ -1,3 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Please work!!!!! ");
-
+﻿using System;
+namespace HighLow
+{
+    class Program
+    {
+        static void Main()
+        {
+            Director director = new Director();
+            director.StartGame;
+            
+        }
+    }
+}

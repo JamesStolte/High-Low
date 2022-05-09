@@ -17,5 +17,3 @@ Higher or lower? [h/l] l
 Next card was: 5
 Your score is: 400
 Play again? [y/n] y
-
-Wassup suckers?
