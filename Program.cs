@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 namespace HighLow
 {
     class Program
@@ -6,7 +6,7 @@ namespace HighLow
         static void Main()
         {
             Director director = new Director();
-            director.StartGame;
+            Director.StartGame;
             
         }
     }

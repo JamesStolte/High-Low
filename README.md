@@ -17,3 +17,29 @@ Higher or lower? [h/l] l
 Next card was: 5
 Your score is: 400
 Play again? [y/n] y
+
+Questions for GITHUB:
+1. How can I push changes to main on GITHUB instead of creating forks
+2. How can i make it so I dont have to ask to commit changes to main
+3. How can I ask to get a specific pull? 
+startGame
+- Player starts the game
+
+DisplayCard
+-Displays the current Card
+
+GuessHighorLow
+- Player guess if next card will be higher or lower 
+
+CorrectGuess-
+-Checks to see if players guess is correct or not
+
+DisplayNext
+-displays the next card
+
+GainPoints
+-Earn or lose points depending on whether the card is higher or loser 
+
+CheckScore
+-Checks the players point count 
+
