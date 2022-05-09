@@ -22,24 +22,35 @@ Questions for GITHUB:
 1. How can I push changes to main on GITHUB instead of creating forks
 2. How can i make it so I dont have to ask to commit changes to main
 3. How can I ask to get a specific pull? 
-startGame
-- Player starts the game
 
-DisplayCard
--Displays the current Card
 
-GuessHighorLow
-- Player guess if next card will be higher or lower 
+Classes:
+Director
+Deck
 
-CorrectGuess-
--Checks to see if players guess is correct or not
+Objects:
+D: KeepPlaying = Bool
 
-DisplayNext
--displays the next card
+States:
+D: STartGame
+// Starts the game 
 
-GainPoints
--Earn or lose points depending on whether the card is higher or loser 
+GetPlayingInput
+// Gets players input whether they're still playing or not
 
-CheckScore
--Checks the players point count 
+HiLowInput
+// Guess whether the card is High or Low
 
+ScoreAddition
+//Adds Score from High Low
+
+CheckIfLose
+// Checks whether player lost or not
+D----------------
+
+DK CardGen
+// Creates the card and tells the user what the card is, returns card as an integer 
+
+GuessCardGen
+// Takes the input of the old number and uses it to make sure the new card is different than the old card
+DK-----------
