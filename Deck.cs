@@ -24,5 +24,11 @@ namespace HighLow {
             
             return guessCard;
         }
+
+
+        public void DoOutputs()
+        {
+            Console.WriteLine("Called DoOutputs()");
+        }
     }
 }

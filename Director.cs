@@ -53,8 +53,8 @@ namespace HighLow
                     Console.WriteLine("Error.  Invalid input.");
                     return "error";
                 }
-
             }
+            return "This should never be returned. This is just to help dotnet build succeed.";
         }
 
         public int ScoreAddition(int startNum, int randNum, string userGuess) 
