@@ -7,30 +7,52 @@ namespace HighLow
         //Constructor
         public void StartGame()
         {
-            bool keepPlaying = true;
+            // bool keepPlaying = true;
             
-            while(keepPlaying == true)
-            {
-                string playingInput = GetPlayingInput();
-                if (playingInput == "y")
-                {
+            // while(keepPlaying == true)
+            // {
+            //     string playingInput = GetPlayingInput();
+            //     if (playingInput == "y")
+            //     {
                     
+            //         deck.CardGen();
+            //         string userInput = HiLowInput();
+            //         deck.DisplayScore(); 
+            //     }
+            //     else if(playingInput == "n")
+            //     {
+            //         keepPlaying = false;
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine("Error.  Invalid input.");
+            //     }
+            // }
+            bool keepPlaying = false;
+
+            do{
+                string playingInput = getPlayingInput();
+                if (playingInput == "y"){
+
+                    keepPlaying = true;
                     deck.CardGen();
                     string userInput = HiLowInput();
-                    deck.DisplayScore(); 
-                }
-                else if(playingInput == "n")
-                {
-                    keepPlaying = false;
-                }
-                else
-                {
-                    Console.WriteLine("Error.  Invalid input.");
-                }
-            }
+
+                } else if (playingInput == "n")
+                    {
+                        keepPlaying = false;
+                    }
+                else 
+                    {
+                        Console.WriteLine("Error. Invalid Input. Try again ");
+                        keepPlaying = true;
+                    }
+
+                
+            }while(keepPlaying = true);
         }
 
-        public string GetPlayingInput() 
+        public string getPlayingInput() 
         {
             Console.WriteLine("Are you still playing? (y/n)");
             string stillPlaying = Console.ReadLine();  
