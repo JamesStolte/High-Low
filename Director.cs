@@ -33,8 +33,11 @@ namespace HighLow
                     //Uses userInput, oldCard, and userInput to calculate the score change needed
                     scoreChange = ScoreAddition(oldCard, newCard, userInput);
 
+                    //Calculates the new score
+                    score = score + scoreChange;
+
                     //Displays the score
-                    deck.DisplayScore(scoreChange); 
+                    deck.DisplayScore(score); 
                 }
                 else if(playingInput == "n")
                 {
@@ -76,6 +79,7 @@ namespace HighLow
 
         public int ScoreAddition(int startNum, int randNum, string userGuess) 
         {
+            Console.WriteLine($"The new card was: {randNum}");
 
             int scoreChange = 0;
             
