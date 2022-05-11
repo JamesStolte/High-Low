@@ -26,6 +26,7 @@ namespace HighLow {
         }
 
 
+        // Displays the Players Score after Guessing 
         public void DisplayScore(int score)
         {
             Console.WriteLine($"Your Score is {score}");

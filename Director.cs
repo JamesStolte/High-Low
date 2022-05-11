@@ -15,7 +15,7 @@ namespace HighLow
             string userInput = "<3";
 
             bool keepPlaying = true;
-            
+            Console.WriteLine($"Beginning Score: {score}");
             while(keepPlaying == true)
             {
                 string playingInput = GetPlayingInput();
@@ -34,12 +34,17 @@ namespace HighLow
                     scoreChange = ScoreAddition(oldCard, newCard, userInput);
 
                     //Calculates the new score
-                    score = score + scoreChange;
+                    
+                    score = ChangeScore(score, scoreChange);
+                    
 
                     //Displays the score
                     deck.DisplayScore(score); 
+
+                    //Check if player loses
+                    CheckIfLose(score, keepPlaying);
                 }
-                else if(playingInput == "n")
+                else if(playingInput == "n" || score <= 0)
                 {
                     keepPlaying = false;
                 }
@@ -109,7 +114,7 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-            else 
+            else if(userGuess == "lo")
             {
                 if (startNum > randNum) 
                 {
@@ -120,8 +125,32 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Invalid input.  Please try again.");
+                scoreChange = 0;
+            }
             return scoreChange;
+        }
+        public bool CheckIfLose(int score, bool keepPlaying)
+        {
+            if(score <= 0)
+            {
+                Console.WriteLine("You Lose!");
+                keepPlaying = false;
+                return keepPlaying;
+            }
+            else
+            {
+                keepPlaying = true;
+                return keepPlaying;
+            }
+        }
+        public int ChangeScore(int score, int ScoreChange)
+        {   
+            int newScore;
+            newScore = score + ScoreChange;
+            return newScore;
         }
     }
 }
