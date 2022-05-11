@@ -17,7 +17,7 @@ namespace HighLow
                     
                     deck.CardGen();
                     string userInput = HiLowInput();
-                    deck.DoOutputs(); 
+                    deck.DisplayScore(); 
                 }
                 else if(playingInput == "n")
                 {
