@@ -44,9 +44,12 @@ namespace HighLow
 
                     //Check if player loses
                     keepPlaying = CheckIfLose(score, keepPlaying);
-
-                    //Check if player wins
-                    keepPlaying = CheckIfWin(score, keepPlaying);
+                    
+                    if(keepPlaying)
+                    {
+                        //Checks if the player would still like to play
+                        playingInput = GetPlayingInput();
+                    }
                 }
                 else if(playingInput == "n")
                 {
@@ -57,8 +60,6 @@ namespace HighLow
                     Console.WriteLine("Error.  Invalid input.");
                 }
 
-                playingInput = GetPlayingInput();
-                
             } while(keepPlaying == true);
         }
 
