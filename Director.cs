@@ -45,8 +45,11 @@ namespace HighLow
                     //Check if player loses
                     keepPlaying = CheckIfLose(score, keepPlaying);
                     
-                    //Checks if the player would still like to play
-                    playingInput = GetPlayingInput();
+                    if(keepPlaying)
+                    {
+                        //Checks if the player would still like to play
+                        playingInput = GetPlayingInput();
+                    }
                 }
                 else if(playingInput == "n")
                 {
