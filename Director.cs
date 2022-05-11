@@ -10,6 +10,8 @@ namespace HighLow
             //initalizing variables early to prevent variable name overwrite issues
             int score = 300;
             int oldCard = 0;
+            int newCard = 0;
+            int scoreChange = 0;
             string userInput = "<3";
 
             bool keepPlaying = true;
@@ -26,9 +28,13 @@ namespace HighLow
                     userInput = HiLowInput();
 
                     //Generates the second card, checks if it is higher or lower than oldCard
-                    deck.GuessCardGen(oldCard);
+                    newCard = deck.GuessCardGen(oldCard);
 
-                    deck.DisplayScore(score); 
+                    //Uses userInput, oldCard, and userInput to calculate the score change needed
+                    scoreChange = ScoreAddition(oldCard, newCard, userInput);
+
+                    //Displays the score
+                    deck.DisplayScore(scoreChange); 
                 }
                 else if(playingInput == "n")
                 {
