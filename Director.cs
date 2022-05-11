@@ -44,6 +44,8 @@ namespace HighLow
 
                     //Check if player loses
                     keepPlaying = CheckIfLose(score, keepPlaying);
+
+                    keepPlaying = CheckIfWin(score, keepPlaying);
                     
                     //Stops the program from asking if the player would like to continue after losing
                     if(keepPlaying)
