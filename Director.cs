@@ -50,10 +50,25 @@ namespace HighLow
             }
         }
 
-        public string GetPlayingInput() 
-        {
+        public string GetPlayingInput() //Asks the user if they are still playing. Forces a y or n answer
+        {   
+            bool run = true;
+            string stillPlaying = "<3";
+
+            while(run)
+            {
             Console.WriteLine("Are you still playing? (y/n)");
-            string stillPlaying = Console.ReadLine();  
+            stillPlaying = Console.ReadLine();  
+            if(stillPlaying == "y" || stillPlaying == "n")
+            {
+                run = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                run = true;
+            }
+            }
             return stillPlaying;
         }
         
