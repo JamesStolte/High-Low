@@ -55,7 +55,7 @@ namespace HighLow
             }
         }
 
-        public string getPlayingInput() 
+        public string GetPlayingInput() 
         {
             Console.WriteLine("Are you still playing? (y/n)");
             string stillPlaying = Console.ReadLine();  
@@ -130,6 +130,7 @@ namespace HighLow
                 keepPlaying = true;
                 return keepPlaying;
             }
+        }
         public int ChangeScore(int score, int ScoreChange)
         {   
             int newScore;
