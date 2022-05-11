@@ -7,6 +7,11 @@ namespace HighLow
         //Constructor
         public void StartGame()
         {
+            //initalizing variables early to prevent variable name overwrite issues
+            int score = 300;
+            int oldCard = 0;
+            string userInput = "<3";
+
             bool keepPlaying = true;
             
             while(keepPlaying == true)
@@ -15,15 +20,15 @@ namespace HighLow
                 if (playingInput == "y")
                 {
                     //Generates the first card, print the card. Saves to oldCard
-                    int oldCard = deck.CardGen();
+                    oldCard = deck.CardGen();
 
                     //Asks the user What they would like to guess. Saves guess to userInput
-                    string userInput = HiLowInput();
+                    userInput = HiLowInput();
 
                     //Generates the second card, checks if it is higher or lower than oldCard
                     deck.GuessCardGen(oldCard);
 
-                    deck.DisplayScore(); 
+                    deck.DisplayScore(score); 
                 }
                 else if(playingInput == "n")
                 {
