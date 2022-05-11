@@ -79,7 +79,9 @@ namespace HighLow
                     scoreChange = ScoreAddition(oldCard, newCard, userInput);
 
                     //Calculates the new score
-                    score = score + scoreChange;
+                    
+                    score = ChangeScore(score, scoreChange);
+                    
 
                     //Displays the score
                     deck.DisplayScore(score); 
@@ -157,6 +159,12 @@ namespace HighLow
                 scoreChange = 0;
             }
             return scoreChange;
+        }
+        public int ChangeScore(int score, int ScoreChange)
+        {   
+            int newScore;
+            newScore = score + ScoreChange;
+            return newScore;
         }
     }
 }
