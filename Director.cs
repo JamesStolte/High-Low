@@ -42,9 +42,9 @@ namespace HighLow
                     deck.DisplayScore(score); 
 
                     //Check if player loses
-                    CheckIfLose(score, keepPlaying);
+                    keepPlaying = CheckIfLose(score, keepPlaying);
                 }
-                else if(playingInput == "n" || score <= 0)
+                else if(playingInput == "n")
                 {
                     keepPlaying = false;
                 }
