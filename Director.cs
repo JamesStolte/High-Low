@@ -13,12 +13,13 @@ namespace HighLow
             int newCard = 0;
             int scoreChange = 0;
             string userInput = "<3";
-
             bool keepPlaying = true;
+            string playingInput = "y";
+
             Console.WriteLine($"Beginning Score: {score}");
-            while(keepPlaying == true)
+
+            do
             {
-                string playingInput = GetPlayingInput();
                 if (playingInput == "y")
                 {
                     //Generates the first card, print the card. Saves to oldCard
@@ -52,13 +53,31 @@ namespace HighLow
                 {
                     Console.WriteLine("Error.  Invalid input.");
                 }
-            }
+
+                playingInput = GetPlayingInput();
+                
+            } while(keepPlaying == true);
         }
 
-        public string GetPlayingInput() 
-        {
+        public string GetPlayingInput() //Asks the user if they are still playing. Forces a y or n answer
+        {   
+            bool run = true;
+            string stillPlaying = "<3";
+
+            while(run)
+            {
             Console.WriteLine("Are you still playing? (y/n)");
-            string stillPlaying = Console.ReadLine();  
+            stillPlaying = Console.ReadLine();  
+            if(stillPlaying == "y" || stillPlaying == "n")
+            {
+                run = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                run = true;
+            }
+            }
             return stillPlaying;
         }
         
