@@ -7,6 +7,7 @@ namespace HighLow
         //Constructor
         public void StartGame()
         {
+<<<<<<< HEAD
             // bool keepPlaying = true;
             
             // while(keepPlaying == true)
@@ -50,6 +51,49 @@ namespace HighLow
 
                 
             }while(keepPlaying = true);
+=======
+            //initalizing variables early to prevent variable name overwrite issues
+            int score = 300;
+            int oldCard = 0;
+            int newCard = 0;
+            int scoreChange = 0;
+            string userInput = "<3";
+
+            bool keepPlaying = true;
+            Console.WriteLine($"Beginning Score: {score}");
+            while(keepPlaying == true)
+            {
+                string playingInput = GetPlayingInput();
+                if (playingInput == "y")
+                {
+                    //Generates the first card, print the card. Saves to oldCard
+                    oldCard = deck.CardGen();
+
+                    //Asks the user What they would like to guess. Saves guess to userInput
+                    userInput = HiLowInput();
+
+                    //Generates the second card, checks if it is higher or lower than oldCard
+                    newCard = deck.GuessCardGen(oldCard);
+
+                    //Uses userInput, oldCard, and userInput to calculate the score change needed
+                    scoreChange = ScoreAddition(oldCard, newCard, userInput);
+
+                    //Calculates the new score
+                    score = score + scoreChange;
+
+                    //Displays the score
+                    deck.DisplayScore(score); 
+                }
+                else if(playingInput == "n")
+                {
+                    keepPlaying = false;
+                }
+                else
+                {
+                    Console.WriteLine("Error.  Invalid input.");
+                }
+            }
+>>>>>>> e4ec04c700588eb7d106a868ff4ec922086cae84
         }
 
         public string getPlayingInput() 
@@ -81,6 +125,7 @@ namespace HighLow
 
         public int ScoreAddition(int startNum, int randNum, string userGuess) 
         {
+            Console.WriteLine($"The new card was: {randNum}");
 
             int scoreChange = 0;
             
@@ -95,7 +140,7 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-            else 
+            else if(userGuess == "lo")
             {
                 if (startNum > randNum) 
                 {
@@ -106,7 +151,11 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Invalid input.  Please try again.");
+                scoreChange = 0;
+            }
             return scoreChange;
         }
     }
