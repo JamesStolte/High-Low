@@ -94,7 +94,7 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-            else 
+            else if(userGuess == "lo")
             {
                 if (startNum > randNum) 
                 {
@@ -105,7 +105,11 @@ namespace HighLow
                     scoreChange = -75;
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Invalid input.  Please try again.");
+                scoreChange = 0;
+            }
             return scoreChange;
         }
     }
