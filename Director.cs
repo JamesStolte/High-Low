@@ -44,6 +44,9 @@ namespace HighLow
 
                     //Check if player loses
                     keepPlaying = CheckIfLose(score, keepPlaying);
+
+                    //Check if player wins
+                    keepPlaying = CheckIfWin(score, keepPlaying);
                 }
                 else if(playingInput == "n")
                 {
@@ -155,6 +158,20 @@ namespace HighLow
             int newScore;
             newScore = score + ScoreChange;
             return newScore;
+        }
+        public bool CheckIfWin(int score, bool keepPlaying)
+        {
+            if (score >= 1000)
+            {
+                Console.WriteLine($"You Win!  Final Score: {score}");
+                keepPlaying = false;
+                return keepPlaying;
+            }
+            else
+            {
+                keepPlaying = true;
+                return keepPlaying;
+            }
         }
     }
 }
