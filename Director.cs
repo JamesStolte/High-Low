@@ -14,9 +14,15 @@ namespace HighLow
                 string playingInput = GetPlayingInput();
                 if (playingInput == "y")
                 {
-                    
-                    deck.CardGen();
+                    //Generates the first card, print the card. Saves to oldCard
+                    int oldCard = deck.CardGen();
+
+                    //Asks the user What they would like to guess. Saves guess to userInput
                     string userInput = HiLowInput();
+
+                    //Generates the second card, checks if it is higher or lower than oldCard
+                    deck.GuessCardGen(oldCard);
+
                     deck.DisplayScore(); 
                 }
                 else if(playingInput == "n")
