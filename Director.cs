@@ -38,8 +38,11 @@ namespace HighLow
 
                     //Displays the score
                     deck.DisplayScore(score); 
+
+                    //Check if player loses
+                    CheckIfLose(score, keepPlaying);
                 }
-                else if(playingInput == "n")
+                else if(playingInput == "n" || score <= 0)
                 {
                     keepPlaying = false;
                 }
@@ -111,6 +114,20 @@ namespace HighLow
                 scoreChange = 0;
             }
             return scoreChange;
+        }
+        public bool CheckIfLose(int score, bool keepPlaying)
+        {
+            if(score <= 0)
+            {
+                Console.WriteLine("You Lose!");
+                keepPlaying = false;
+                return keepPlaying;
+            }
+            else
+            {
+                keepPlaying = true;
+                return keepPlaying;
+            }
         }
     }
 }
