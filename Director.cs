@@ -15,7 +15,7 @@ namespace HighLow
             string userInput = "<3";
 
             bool keepPlaying = true;
-            
+            Console.WriteLine($"Beginning Score: {score}");
             while(keepPlaying == true)
             {
                 string playingInput = GetPlayingInput();
