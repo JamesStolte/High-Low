@@ -34,7 +34,9 @@ namespace HighLow
                     scoreChange = ScoreAddition(oldCard, newCard, userInput);
 
                     //Calculates the new score
-                    score = score + scoreChange;
+                    
+                    score = ChangeScore(score, scoreChange);
+                    
 
                     //Displays the score
                     deck.DisplayScore(score); 
@@ -53,7 +55,7 @@ namespace HighLow
             }
         }
 
-        public string GetPlayingInput() 
+        public string getPlayingInput() 
         {
             Console.WriteLine("Are you still playing? (y/n)");
             string stillPlaying = Console.ReadLine();  
@@ -128,6 +130,11 @@ namespace HighLow
                 keepPlaying = true;
                 return keepPlaying;
             }
+        public int ChangeScore(int score, int ScoreChange)
+        {   
+            int newScore;
+            newScore = score + ScoreChange;
+            return newScore;
         }
     }
 }
