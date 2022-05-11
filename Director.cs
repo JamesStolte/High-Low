@@ -1,6 +1,8 @@
 using System;
 namespace HighLow
 {
+
+//MAIN GIVEN TO PROGRAM
     class Director
     {
         private Deck deck = new Deck();
@@ -35,9 +37,7 @@ namespace HighLow
                     scoreChange = ScoreAddition(oldCard, newCard, userInput);
 
                     //Calculates the new score
-                    
                     score = ChangeScore(score, scoreChange);
-                    
 
                     //Displays the score
                     deck.DisplayScore(score); 
@@ -45,6 +45,7 @@ namespace HighLow
                     //Check if player loses
                     keepPlaying = CheckIfLose(score, keepPlaying);
                     
+                    //Stops the program from asking if the player would like to continue after losing
                     if(keepPlaying)
                     {
                         //Checks if the player would still like to play
@@ -62,6 +63,7 @@ namespace HighLow
 
             } while(keepPlaying == true);
         }
+
 
         public string GetPlayingInput() //Asks the user if they are still playing. Forces a y or n answer
         {   
@@ -85,6 +87,7 @@ namespace HighLow
             return stillPlaying;
         }
         
+
         public string HiLowInput() 
         {
             bool keepLoop = true;
@@ -104,6 +107,7 @@ namespace HighLow
             }
             return "This should never be returned. This is just to help dotnet build succeed.";
         }
+
 
         public int ScoreAddition(int startNum, int randNum, string userGuess) 
         {
@@ -140,6 +144,8 @@ namespace HighLow
             }
             return scoreChange;
         }
+
+
         public bool CheckIfLose(int score, bool keepPlaying)
         {
             if(score <= 0)
