@@ -26,9 +26,9 @@ namespace HighLow {
         }
 
 
-        public void DoOutputs()
+        public void DisplayScore( )
         {
-            Console.WriteLine("Called DoOutputs()");
+            Console.WriteLine($"Your Score is {}");
         }
     }
 }
